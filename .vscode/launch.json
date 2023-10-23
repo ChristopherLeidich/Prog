@@ -1,0 +1,179 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "PowerShell Attach Interactive Session Runspace",
+      "type": "PowerShell",
+      "request": "attach",
+      "processId": "current"
+    },
+    {
+      "name": "(gdb) Starten",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "Programmnamen eingeben, z. B. \"${workspaceFolder}/a.out\"",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Automatische Strukturierung und Einrückung für \"gdb\" aktivieren",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Disassemblierungsvariante auf Intel festlegen",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "(gdb) Starten",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "Programmnamen eingeben, z. B. \"${workspaceFolder}/a.out\"",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Automatische Strukturierung und Einrückung für \"gdb\" aktivieren",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Disassemblierungsvariante auf Intel festlegen",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "(gdb) Pipe starten",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "Programmnamen eingeben, z. B. \"${workspaceFolder}/a.out\"",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "pipeTransport": {
+        "debuggerPath": "/usr/bin/gdb",
+        "pipeProgram": "/usr/bin/ssh",
+        "pipeArgs": [],
+        "pipeCwd": ""
+      },
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Automatische Strukturierung und Einrückung für \"gdb\" aktivieren",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Disassemblierungsvariante auf Intel festlegen",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "(gdb) Anfügen",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "Programmnamen eingeben, z. B. \"${workspaceFolder}/a.out\"",
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Automatische Strukturierung und Einrückung für \"gdb\" aktivieren",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Disassemblierungsvariante auf Intel festlegen",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "(gdb) An Pipe anfügen",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "Programmnamen eingeben, z. B. \"${workspaceFolder}/a.out\"",
+      "processId": "${command:pickRemoteProcess}",
+      "pipeTransport": {
+        "debuggerPath": "/usr/bin/gdb",
+        "pipeProgram": "/usr/bin/ssh",
+        "pipeArgs": [],
+        "pipeCwd": ""
+      },
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Automatische Strukturierung und Einrückung für \"gdb\" aktivieren",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Disassemblierungsvariante auf Intel festlegen",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/home/christopher/Dokumente/Prog2",
+      "program": "/home/christopher/Dokumente/Prog2/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "C/C++: g++ Aktive Datei erstellen und debuggen",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Automatische Strukturierung und Einrückung für \"gdb\" aktivieren",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Disassemblierungsvariante auf Intel festlegen",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: g++ Aktive Datei kompilieren",
+      "miDebuggerPath": "/usr/bin/gdb"
+    }
+  ]
+}
